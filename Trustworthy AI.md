@@ -1,0 +1,10 @@
+***
+
+Artificial Intelligence (AI) systems are becoming ubiquitous and will impact every aspect of our lives.  However, the current functioning of AI systems rises several concerns about their use as a key tool in our societies. In contrast to classic deterministic rule-based models, contemporary AI algorithms are predominantly data-driven, resulting in outputs that can be highly unpredictable and challenging to justify by their creators. To foster broader acceptance of AI systems in our society, it is crucial to build [[trust]] among various stakeholders, including developers, domain experts, policymakers, governments, end users, and more.
+
+>_As creators of AI systems, we have a duty to guide the development and applications of AI in ways that it fits our social values_
+
+To build trustworthy AI models, there are a set of general criteria that AI models must satisfy in order to provide trust to different parties involved. These criteria include ***[Fairness and equity](./Fairness/Fairness%20in%20AI.md)***$-$ AI models should not (unintentionally) discriminate against certain individuals or groups of individuals and thus promote justice; ***[Privacy-preserving](Privacy)***$-$ to protect and provide privacy guarantees of sensitive data of users involved in the system. ***[Explanability and transparency](Explanability)***$-$ decisions provided by AI systems must be justifiable or interpretable, and their inherent functioning understandable. [Accountability and responsibility](Accountability)$-$ The responsibility of AI designers and developers extend to the careful consideration of AI design, development processes, decision-making procedures, and the resulting outcomes. [Safety and security]()$-$ AI models must robust to unusual cases or attacks by malicious users.   
+
+
+![[responsible_ai_fairness_robustness-Page-2.drawio 1.png]]

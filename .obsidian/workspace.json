@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "a5f2dcdbeb5fb0fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "2846efffcc47fa55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1385b2e40dbbedd0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "f222338c787f554e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "be28d5e82a378895",
+    "type": "split",
+    "children": [
+      {
+        "id": "23825d545b3da153",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f0aa286927d5469",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f92674045f42f569",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "340bc3c9dafcfc89",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "cd9463899638c356",
+    "type": "split",
+    "children": [
+      {
+        "id": "4164e39a9c595562",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a0b5e3a00dd8ec71",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9b9c261cd27b37bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f2e4a46749d421e1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "04a6a4b4e92a12b2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-grammarly-plugin:Enable Grammarly": false
+    }
+  },
+  "active": "1385b2e40dbbedd0",
+  "lastOpenFiles": [
+    "Fairness/Fairness in AI.md",
+    "Fairness/Fairness Algorithms.md",
+    "Fairness/Fairness algorithms/Pre-processing techniques.md",
+    "Fairness/Fairness algorithms/Post-processing techniques.md",
+    "Fairness/Fairness algorithms/In-processing techniques.md",
+    "Fairness/Fairness algorithms",
+    "Fairness/Real-world examples of AI unfairness.md",
+    "Fairness/Fairness Definitions.md",
+    "Fairness Definitions.md",
+    "Fairness/Source of bias in AI.md",
+    "Trustworthy AI.md",
+    "2023-05-19.md",
+    "().md",
+    "Fairness/Exemples of AI unfairness.md",
+    "README.md",
+    "Untitled.canvas",
+    "Fairness.md",
+    "Exemples.md",
+    "real-world exemples of AI application.md",
+    "Fairness/Real-world exemples.md",
+    "Fairness/Real-world.md",
+    "Real-world.md",
+    "Privacy/Privacy.md",
+    "responsible_ai_fairness_robustness-Page-2.drawio 1.png",
+    "responsible_ai_fairness_robustness-Page-2.drawio.png",
+    "Pasted image 20230519120847.png",
+    "Transparence and Explanability/Explanability.md",
+    "Transparence and Explanability",
+    "Accountability",
+    "Privacy",
+    "Fairness",
+    "Accountability/Accountability.md"
+  ]
+}
