@@ -26,12 +26,15 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
  >To enforce [Equal Opportunity](../Fairness%20Definitions.md), the adversary gets the classifier outputs of samples where $Y=1$. 
 
 Similarly, [censoring representation](https://arxiv.org/pdf/1511.05897.pdf) uses an adversarial approach where instead of the classifier output, the adversary gets the latent representation of the input data to predict the sensitive attribute. In addition to the adversary, two other network heads are used: the reconstruction head used to reconstruct the input from the latent code, and the classifier head used to predict the class label. In this approach the loss function is a triple loss:
+
 $$
 L = \alpha C(X, Z) + \beta D(S, Z) + \gamma E(Y, Z)
 $$
-    * $E(Y, Z)$ is the classifier loss, typically a cross-entropy loss.
-    * $D(S, Z)$ is the discriminator loss, also a cross-entropy loss.
-    * $C(X, Z)$ is the reconstruction loss defined as mean squared error loss. 
+Where:
+	- $E(Y, Z)$ is the classifier loss, typically a cross-entropy loss.
+	- $D(S, Z)$ is the discriminator loss, also a cross-entropy loss.
+	- $C(X, Z)$ is the reconstruction loss defined as mean squared error loss. 
+
 $\alpha, \beta$ and  $\gamma$ control each loss.  The advantage of this approach is that the latent representation can be used for a different downstream, therefore this approach can also be seen as a preprocessing technique. 
 
 - Reduction approach 
