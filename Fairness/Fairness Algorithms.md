@@ -7,7 +7,7 @@ Regularization is a technique used in ML to prevent the model from overfitting o
 The classification problem becomes a constrained optimization problem where the goal is to minimize the classification error (maximize the accuracy) while satisfying a given fairness constraint:
  
 $$ 
-    \min_{h \in \mathcal{H}} \operatorname{err}(h) \; \: \text{subject to}  \; \: \Delta(h) \leq c
+    \min_{h \in \mathcal{H}} \text{err}(h) \; \: \text{subject to}  \; \: \Delta(h) \leq c
 $$
 
 Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures the disparities in the model, fairness. However, this optimization problem is nonconvex and difficult to enforce. Therefore, existing in-processing techniques are reformulated in different ways or dual problems are solved. They can be grouped as follows:
@@ -16,14 +16,14 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
   Adversarial learning, originally developed for enhancing the security of neural network models against adversarial attacks, has found applications in various domains. Apart from its initial purpose, it has also been utilized in diverse areas, including [generative models](https://arxiv.org/abs/1406.2661) and promoting fairness. A popular application of adversarial learning to enforce  fairness  constraints to a model is adversarial debiasing.  
   
   [Adversarial debiasing](https://dl.acm.org/doi/abs/10.1145/3278721.3278779) is an adversarial-based approach that enforces the independence between the classifier outcome and the sensitive attributes, i.e., $\hat{Y} \perp A$. Where $A$ is the sensitive attribute  
-   
-  ![[Screen Shot 2023-06-03 at 11.58.43 AM.png]]
 
- The classifier's output is used as input for the adversary network that tries to predict the sensitive attribute. In the minimax optimization problem, the goal of the classifier is to prevent the adversary to predict the sensitive attribute. 
+  ![[avd_debaising.png]]
+
+ The classifier's output is used as input for the adversary network that tries to predict the sensitive attribute. In the minimax optimization problem, the goal of the classifier is to prevent the adversary to predict the sensitive attribute, thus enforcing [statistical parity](../Fairness%20Definitions.md), i.e., $\hat{Y} \perp A$
  
- >To enforce [Equalized Odds](./), the adversary takes  as input the predicted outcome and ground truth. Thus fooling the adversary enforces $\hat{Y},{Y} \perp A$  
+ >To enforce [Equalized Odds](../Fairness%20Definitions.md), the adversary takes  as input the predicted outcome and ground truth. Thus fooling the adversary enforces $\hat{Y},{Y} \perp A$  
  
- >To enforce [Equal Opportunity](), the adversary gets the classifier outputs of samples where $Y=1$. 
+ >To enforce [Equal Opportunity](../Fairness%20Definitions.md), the adversary gets the classifier outputs of samples where $Y=1$. 
 
 Similarly, [censoring representation](https://arxiv.org/pdf/1511.05897.pdf) uses an adversarial approach where instead of the classifier output, the adversary gets the latent representation of the input data to predict the sensitive attribute. In addition to the adversary, two other network heads are used: the reconstruction head used to reconstruct the input from the latent code, and the classifier head used to predict the class label. In this approach the loss function is a triple loss:
 $$
