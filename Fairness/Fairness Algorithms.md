@@ -12,6 +12,7 @@ $$
 
 Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures the disparities in the model, fairness. However, this optimization problem is nonconvex and difficult to enforce. Therefore, existing in-processing techniques are reformulated in different ways or dual problems are solved. They can be grouped as follows:
 - Adversarial-based approach
+  
   [Adversarial learning](https://dl.acm.org/doi/abs/10.1145/1081870.1081950?casa_token=-fstSfXI7LEAAAAA:QbYE6sImT_eM1ZSOtF27tcnu2KYp4E9WNLXnDYC1Iaec7DUvuTojZYGLMbCfVgh15T-xgD6SuBNVkzA) is a group of approaches that are inspired by the zero-sum game problem in game theory. In contrast to classical learning problems, the goal of adversarial learning is to craft *bad samples* or mislead a model. 
   Adversarial learning, originally developed for enhancing the security of neural network models against adversarial attacks, has found applications in various domains. Apart from its initial purpose, it has also been utilized in diverse areas, including [generative models](https://arxiv.org/abs/1406.2661) and promoting fairness. A popular application of adversarial learning to enforce  fairness  constraints to a model is adversarial debiasing.  
   
