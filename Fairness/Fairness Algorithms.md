@@ -17,12 +17,12 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
   [The Exponential Gradient](https://arxiv.org/pdf/1803.02453.pdf) approach for fairness transforms any binary classification problem into a cost-sensitive classification problem, that can yield a randomized classifier having the lowest error while satisfying fairness constraints. This approach can work with any baseline classifier (Logistic Regression, Random Forest, SVM, etc) and most fairness metrics. 
   The constrained problem in the above [equation](#eq_fair_constraint) is rewritten into a saddle point problem using a Lagrangian. The new problem is solved by the Exponential Gradient  method that looks for the saddle point where the classification loss is minimized and fairness is maximized (the disparities are minimal). The Exp gradient thus solves the following problem. 
   $$
-L(Q, \boldsymbol{\lambda})=\widehat{\text{err}}(Q)+\boldsymbol{\lambda}^{\top}(\mathbf{M} \widehat{\boldsymbol{\mu}}(Q)-\widehat{\mathbf{c}})
+L(Q, \lambda)=\widehat{\text{err}}(Q)+\lambda^{\top}(\mathbf{M} \widehat{\mu}(Q)-\widehat{\mathbf{c}})
 $$
 $$
-\min _{Q \in \Delta} \max _{\boldsymbol{\lambda} \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \boldsymbol{\lambda}) .
+\min _{Q \in \Delta} \max _{\lambda \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \lambda) .
 $$
-  where  $\widehat{\text{err}}(Q)$ is the empirical classification error of a randomized classifier, $\lambda_k$ is the Lagrange multiplier of each constraint, $\mathbf{M} \widehat{\boldsymbol{\mu}}(Q)$ a matrix where each row represents a fairness constraint.  Please note that the variable $\hat{c}$ represents the allowable error in the fairness constraints. When $\hat{c}=0$, it signifies maximum fairness with zero disparities. This approach is particularly intriguing because it provides the ability to manage the balance between fairness and accuracy, allowing for tradeoffs to be controlled effectively.
+  where  $\widehat{\text{err}}(Q)$ is the empirical classification error of a randomized classifier, $\lambda_k$ is the Lagrange multiplier of each constraint, $\mathbf{M} \widehat{\mu}(Q)$ a matrix where each row represents a fairness constraint.  Please note that the variable $\hat{c}$ represents the allowable error in the fairness constraints. When $\hat{c}=0$, it signifies maximum fairness with zero disparities. This approach is particularly intriguing because it provides the ability to manage the balance between fairness and accuracy, allowing for tradeoffs to be controlled effectively.
    
   An open-source implementation is available on the Fairlearn package. [Source code](https://fairlearn.org/v0.5.0/api_reference/fairlearn.reductions.html)
   
@@ -42,20 +42,22 @@ $$
  
  [Open source code](https://fairlearn.org/main/user_guide/mitigation/adversarial.html)
  
- 
  Similarly, [censoring representation](https://arxiv.org/pdf/1511.05897.pdf) uses an adversarial approach where instead of the classifier output, the adversary gets the latent representation of the input data to predict the sensitive attribute. In addition to the adversary, two other network heads are used: the reconstruction head used to reconstruct the input from the latent code, and the classifier head used to predict the class label. In this approach the loss function is a triple loss:
- $$
-		L = \alpha C(X, Z) + \beta D(S, Z) + \gamma E(Y, Z) $$Where:
+			 
+			 $$
+		L = \alpha C(X, Z) + \beta D(S, Z) + \gamma E(Y, Z) 
+		$$
+	Where:
 	- $E(Y, Z)$ is the classifier loss, typically a cross-entropy loss.
 	- $D(S, Z)$ is the discriminator loss, also a cross-entropy loss.
 	- $C(X, Z)$ is the reconstruction loss defined as mean squared error loss. 
- $\alpha, \beta$ and  $\gamma$ control each loss.  The advantage of this approach is that the latent representation can be used for a different downstream, therefore this approach can also be seen as a preprocessing technique. 
+	$\alpha, \beta$ and  $\gamma$ control each loss.  The advantage of this approach is that the latent representation can be used for a different downstream, therefore this approach can also be seen as a preprocessing technique. 
  
  - FairBatch 
-  
-  [FairBatch](https://arxiv.org/abs/2012.01696) is a batch selection process that enforces a given fairness metric by sampling minibatches  in a way to transform the Empirical Risk Minimization problem into a weighted EMR, i.e., incorporate fairness constraints. In a nutshell, FairBatch modifies the ratio of demographic groups in the minibatch by increasing the representation of the group of the samples mostly misclassified in the previous batch.   A sampling strategy is defined for each fairness such as [statistical parity](../Fairness%20Definitions.md), [Equalized Odds](../Fairness%20Definitions.md), [Equal Opportunity](../Fairness%20Definitions.md).  The ratio of each group in the minibatch is computed based on the disparity measured by each fairness method.
-  
-  Open-source implementation [Source code](https://github.com/yuji-roh/fairbatch)
+   
+   [FairBatch](https://arxiv.org/abs/2012.01696) is a batch selection process that enforces a given fairness metric by sampling minibatches  in a way to transform the Empirical Risk Minimization problem into a weighted EMR, i.e., incorporate fairness constraints. In a nutshell, FairBatch modifies the ratio of demographic groups in the minibatch by increasing the representation of the group of the samples mostly misclassified in the previous batch.   A sampling strategy is defined for each fairness such as [statistical parity](../Fairness%20Definitions.md), [Equalized Odds](../Fairness%20Definitions.md), [Equal Opportunity](../Fairness%20Definitions.md).  The ratio of each group in the minibatch is computed based on the disparity measured by each fairness method. 
+   
+   Open-source implementation [Source code](https://github.com/yuji-roh/fairbatch)
 
 
 
