@@ -16,10 +16,7 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
   The constrained problem in the above [equation](#eq_fair_constraint) is rewritten into a saddle point problem using a Lagrangian. The new problem is solved by the Exponential Gradient  method that looks for the saddle point where the classification loss is minimized and fairness is maximized (the disparities are minimal). The Exp gradient thus solves the following problem. 
   
   $$L(Q, \lambda)=\widehat{\text{err}}(Q)+\lambda^{\top}(\mathbf{M} \widehat{\mu}(Q)-\widehat{\mathbf{c}})$$
-
-$$\min _{Q \in \Delta} \max _{\lambda \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \lambda)$$
-
-
+  $$\min_{Q \in \Delta} \max_{\lambda \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \lambda)$$
   where  $\widehat{\text{err}}(Q)$ is the empirical classification error of a randomized classifier, $\lambda_k$ is the Lagrange multiplier of each constraint, $\mathbf{M} \widehat{\mu}(Q)$ a matrix where each row represents a fairness constraint.  Please note that the variable $\hat{c}$ represents the allowable error in the fairness constraints. When $\hat{c}=0$, it signifies maximum fairness with zero disparities. This approach is particularly intriguing because it provides the ability to manage the balance between fairness and accuracy, allowing for tradeoffs to be controlled effectively.
    
   An open-source implementation is available on the Fairlearn package. [Source code](https://fairlearn.org/v0.5.0/api_reference/fairlearn.reductions.html)
