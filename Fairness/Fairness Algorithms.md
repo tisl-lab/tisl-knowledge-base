@@ -51,7 +51,9 @@ $$
 			 $$
 		L = \alpha C(X, Z) + \beta D(S, Z) + \gamma E(Y, Z) 
 		$$
-	Where:
+		
+		
+Where:
 	- $E(Y, Z)$ is the classifier loss, typically a cross-entropy loss.
 	- $D(S, Z)$ is the discriminator loss, also a cross-entropy loss.
 	- $C(X, Z)$ is the reconstruction loss defined as mean squared error loss. 
