@@ -6,9 +6,7 @@ Regularization is a technique used in ML to prevent the model from overfitting o
 
 The classification problem becomes a constrained optimization problem where the goal is to minimize the classification error (maximize the accuracy) while satisfying a given fairness constraint:
  
-<a id="eq_fair_constraint"></a>$$ 
-    \min_{h \in \mathcal{H}} \text{err}(h) \; \: \text{subject to}  \; \: \Delta(h) \leq c
-$$
+<a id="eq_fair_constraint"></a>$$\min_{h \in \mathcal{H}} \text{err}(h) \; \: \text{subject to}  \; \: \Delta(h) \leq c$$
 
 Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures the disparities in the model, fairness. However, this optimization problem is nonconvex and difficult to enforce. Therefore, existing in-processing techniques are reformulated in different ways or dual problems are solved. They can be grouped as follows:
 
@@ -17,7 +15,7 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
   [The Exponential Gradient](https://arxiv.org/pdf/1803.02453.pdf) approach for fairness transforms any binary classification problem into a cost-sensitive classification problem, that can yield a randomized classifier having the lowest error while satisfying fairness constraints. This approach can work with any baseline classifier (Logistic Regression, Random Forest, SVM, etc) and most fairness metrics. 
   The constrained problem in the above [equation](#eq_fair_constraint) is rewritten into a saddle point problem using a Lagrangian. The new problem is solved by the Exponential Gradient  method that looks for the saddle point where the classification loss is minimized and fairness is maximized (the disparities are minimal). The Exp gradient thus solves the following problem. 
   
-  $$ L(Q, \lambda)=\widehat{\text{err}}(Q)+\lambda^{\top}(\mathbf{M} \widehat{\mu}(Q)-\widehat{\mathbf{c}})$$
+  $$L(Q, \lambda)=\widehat{\text{err}}(Q)+\lambda^{\top}(\mathbf{M} \widehat{\mu}(Q)-\widehat{\mathbf{c}})$$
 
 $$\min _{Q \in \Delta} \max _{\lambda \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \lambda)$$
 
