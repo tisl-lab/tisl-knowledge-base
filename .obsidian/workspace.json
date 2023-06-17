@@ -168,8 +168,9 @@
   },
   "active": "1385b2e40dbbedd0",
   "lastOpenFiles": [
-    "Fairness/Fairness Definitions.md",
+    "Fairness/Fairness algorithms/In-processing techniques.md",
     "Fairness/Fairness Algorithms.md",
+    "Fairness/Fairness Definitions.md",
     "Fairness/Fairness in AI.md",
     "Trustworthy AI.md",
     "avd_debiasing.png.md",
@@ -179,7 +180,6 @@
     "responsible_ai_fairness_robustness-Page-2.drawio 1.png",
     "Fairness/Source of bias in AI.md",
     "Fairness/Real-world examples of AI unfairness.md",
-    "Fairness/Fairness algorithms/In-processing techniques.md",
     "Fairness/Fairness algorithms/Pre-processing techniques.md",
     "Fairness/Fairness algorithms/Post-processing techniques.md",
     "Fairness/Fairness algorithms",

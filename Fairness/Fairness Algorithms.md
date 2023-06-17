@@ -19,7 +19,11 @@ Where $h\in\mathcal{H}$ is a set of possible models, and $\Delta(h)$ measures th
   $$\min_{Q \in \Delta} \max_{\lambda \in \mathbb{R}_{+}^{|\mathcal{K}|}} L(Q, \lambda)$$
   where  $\widehat{\text{err}}(Q)$ is the empirical classification error of a randomized classifier, $\lambda_k$ is the Lagrange multiplier of each constraint, $\mathbf{M} \widehat{\mu}(Q)$ a matrix where each row represents a fairness constraint.  Please note that the variable $\hat{c}$ represents the allowable error in the fairness constraints. When $\hat{c}=0$, it signifies maximum fairness with zero disparities. This approach is particularly intriguing because it provides the ability to manage the balance between fairness and accuracy, allowing for tradeoffs to be controlled effectively.
    
-  An open-source implementation is available on the Fairlearn package. [Source code](https://fairlearn.org/v0.5.0/api_reference/fairlearn.reductions.html)
+  An open-source implementation is available on the Fairlearn package. [Source code](https://fairlearn.org/v0.5.0/api_reference/fairlearn.reductions.html) 
+  
+  [FairGrad](https://arxiv.org/abs/2206.10923) uses a similar formulation to the Exponential Gradient by formulating the constrained problem [above](#eq_fair_constraint) in an unconstrained optimization problem with Lagrange multipliers. The unconstrained problem is solved  using alternating updates of the classifier (gradient descent) and the lagrangians (gradient ascent).  Implicitly, samples from disadvantaged groups will be up-weighted while samples from advantaged groups will be down-weighted. 
+  
+  [AdaFair](https://arxiv.org/abs/1909.08982) is an adaptation of boosting method, where the weights of each sample are computed by considering both the fairness and accuracy of previous weak learners. The key idea of this approach is: at each boosting round, evaluate fairness violation (e.g., the difference in true positive rate) of the current model in the ensemble. Samples from the group that received an unfair outcome  are boosted (assigned higher weights) in the next round of training.
   
 - Adversarial-based approach
   
