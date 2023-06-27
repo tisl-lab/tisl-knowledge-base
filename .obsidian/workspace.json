@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fairness/Real-world examples of AI unfairness.md",
+                "file": "Fairness/Fairness algorithms/Post-processing techniques.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 271.5
   },
   "right": {
     "id": "cd9463899638c356",
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fairness/Real-world examples of AI unfairness.md",
+                "file": "Fairness/Fairness algorithms/Post-processing techniques.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fairness/Real-world examples of AI unfairness.md",
+                "file": "Fairness/Fairness algorithms/Post-processing techniques.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fairness/Real-world examples of AI unfairness.md"
+                "file": "Fairness/Fairness algorithms/Post-processing techniques.md"
               }
             }
           }
@@ -168,11 +168,16 @@
   },
   "active": "1385b2e40dbbedd0",
   "lastOpenFiles": [
-    "Fairness/Real-world examples of AI unfairness.md",
-    "Fairness/Fairness Definitions.md",
-    "Fairness/Fairness Algorithms.md",
+    "Fairness/Fairness algorithms/Post-processing techniques.md",
     "Fairness/Fairness algorithms/In-processing techniques.md",
+    "Fairness/Fairness Enhancing Methods.md",
+    "().md",
     "Fairness/Fairness in AI.md",
+    "Fairness/Real-world examples of AI unfairness.md",
+    "Fairness/Fairness algorithms/Pre-processing techniques.md",
+    "Fairness algorithms/In-processing techniques.md",
+    "Fairness algorithms",
+    "Fairness/Fairness Definitions.md",
     "Trustworthy AI.md",
     "avd_debiasing.png.md",
     "avd_debaising.png",
@@ -180,12 +185,9 @@
     "Accountability/Accountability.md",
     "responsible_ai_fairness_robustness-Page-2.drawio 1.png",
     "Fairness/Source of bias in AI.md",
-    "Fairness/Fairness algorithms/Pre-processing techniques.md",
-    "Fairness/Fairness algorithms/Post-processing techniques.md",
     "Fairness/Fairness algorithms",
     "Fairness Definitions.md",
     "2023-05-19.md",
-    "().md",
     "Fairness/Exemples of AI unfairness.md",
     "README.md",
     "Untitled.canvas",

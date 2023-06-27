@@ -1,0 +1,3 @@
+Fairness-enhancing post-processing techniques involve methods that treat the model as a [black box]() and enforce fairness constraints over the model's output. 
+
+Most existing methods consist of post hoc modification of the model's outputs in order to satisfy a given fairness metric. In particular, Hardt et al. [formalized](https://proceedings.neurips.cc/paper/2016/hash/9d2682367c3935defcb1f9e247a97c0d-Abstract.html) an optimization problem over the model's output to find the threshold of each demographic group such that it maximizes the classification loss while satisfying fairness constraints, i.e., equal opportunity and equalized odds. Similar methods are proposed in the literature, and they differ mainly in the way the optimization problem is defined.
