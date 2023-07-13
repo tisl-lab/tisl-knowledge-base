@@ -1,4 +1,3 @@
-
 In-processing techniques are used when we have access to the model training and it is not costly to retrain a model existing. In a nutshell, the loss function is transformed to add a loss/regularization term that penalizes the model's disparities across groups. Therefore, the model is forced to optimize for accuracy and fairness. 
 
 Regularization is a technique used in ML to prevent the model from overfitting on the training, by penalizing the model's weights using $L_1$ or $L_2$ norms. 
