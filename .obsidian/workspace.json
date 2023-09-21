@@ -11,17 +11,9 @@
             "id": "1385b2e40dbbedd0",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "d11c52e53dada09e",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Fairness/Fairness Enhancing Methods.md",
+                "file": "Fairness/Fairness Definitions.md",
                 "mode": "source",
                 "source": false
               }
@@ -35,8 +27,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fairness/Fairness Enhancing Methods.md",
+                "file": "Fairness/Fairness Definitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fairness/Fairness Enhancing Methods.md",
+                "file": "Fairness/Fairness Definitions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fairness/Fairness Enhancing Methods.md"
+                "file": "Fairness/Fairness Definitions.md"
               }
             }
           },
@@ -175,15 +166,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d11c52e53dada09e",
+  "active": "1385b2e40dbbedd0",
   "lastOpenFiles": [
-    "Fairness/Fairness Definitions.md",
-    "Fairness/Fairness Enhancing Methods.md",
-    "Fairness/Fairness Beyond Classification.md",
-    "Fairness/Fairness algorithms/In-processing techniques.md",
-    "Accountability/Accountability.md",
     "Fairness/Fairness algorithms/Post-processing techniques.md",
     "Fairness/Fairness algorithms/Pre-processing techniques.md",
+    "Fairness/Fairness algorithms/In-processing techniques.md",
+    "Trustworthy AI.md",
+    "Fairness/Fairness Enhancing Methods.md",
+    "Fairness/Fairness Definitions.md",
+    "Fairness/Fairness Beyond Classification.md",
+    "Accountability/Accountability.md",
     "Fairness/Real-world examples of AI unfairness.md",
     "Fairness/Fairness in AI.md",
     "responsible_ai_fairness_robustness-Page-2.drawio 1.png",
@@ -192,7 +184,6 @@
     "().md",
     "Fairness algorithms/In-processing techniques.md",
     "Fairness algorithms",
-    "Trustworthy AI.md",
     "avd_debiasing.png.md",
     "avd_debaising.png",
     "Transparence and Explanability/Explanability.md",

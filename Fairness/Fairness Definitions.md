@@ -24,5 +24,17 @@ Examples of decision-making processes with disparate treatment and Disparate Tre
 
 
 
-## Fairness metrics in Machine Learning
+## Fairness Metrics in Machine Learning
 
+There are two main groups of fairness metrics: individual fairness and group fairness metric. Individual fairness looks at fairness at the individual level, while group fairness tries to equalize a given metric across different demographic groups. There are also some fairness notion that do not require group information, such as the Rawlsian Max-Min fairness notion
+
+- **Individual fairness** says similar individuals should be treated similarly. For example, two applicants with the same ability to repay a loan should receive the same decision.
+**Prerequisite:** task-specific distance metric, $m(v_1, v_2)$;  decision distribution metric, $m'(v_1, v_2)$. 
+**Definition of Fairness:** $\forall v_1, v_2, m'(d(v_1), d(v_2)) \leq m(v_1, v_2)$ 
+The main shortcoming of this metric is its assumption of the existence of a task-specific metric. In practice, this metric can be hard to define. Some lines of work trying to learn such metrics from data. 
+
+#### Group fairness
+
+**Prerequisite:** sensitive attributes or group membership (e.g. race)
+
+-  Statistical parity 
